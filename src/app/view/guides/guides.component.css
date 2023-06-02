@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-MediumItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BoldItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BookItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Book.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Book.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Black.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:Circular Std ;
+  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Bold.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --main-bg-color: #503E9D;
+  --font-primary: Circular Std;
+}
+
+.titre{
+
+  padding-left: 15%;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51px;
+  /* identical to box height */
+  color: #000000;
+}
+
+.paragraph{
+  width: 582px;
+  color: #797876;
+}
+
+.guide-image{
+  width: 935px;
+  height: 523px;
+  left: 654px;
+  top: 310px;
+}
+
+.container-fluid{
+  background: #E5E5E5;
+  background-color: #E5E5E5;
+  height: 1000px;
+}
+
+.container{
+  background: #E5E5E5;
+width: 100%;
+}
+.custom-row{
+  background-color: #E5E5E5;
+  padding: 10px;
+}
+row:nth-of-type(5){
+  background-color:#E5E5E5 ;
+}
+.contenu{
+  padding-top: 10%;
+  padding-left: 40%;
+}

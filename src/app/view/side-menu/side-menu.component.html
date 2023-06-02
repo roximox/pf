@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<!-- https://bootstrapious.com/p/bootstrap-sidebar -->
+
+<div class="wrapper">
+
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <ul class="list-unstyled components">
+      <p><img src="assets/playground_assets2/logowhite1920x813632-afko-200h.png">Slinker</p>
+      <li class="active">
+
+        <a routerLink="../sites" data-toggle="collapse" aria-expanded="false" >
+          <img src="/assets/playground_assets/vector3633-d2ol.svg">Sites</a>
+      </li>
+      <li>
+        <a routerLink="https://eysi.net"><img src="/assets/playground_assets/favicon32x3213634-sugd-200w.png">eysi.net</a>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+          <img src="/assets/playground_assets/vector3633-3gk.svg"> Dashboard</a>
+      </li>
+      <li>
+        <a href="#"> <img src="/assets/playground_assets/vector3634-n2k.svg">Affiliate audit</a>
+      </li>
+      <li class="affiliate-items">
+        <a href="#"> <i class="fa fa-check" aria-hidden="true"></i>Summary</a>
+      </li>
+      <li class="affiliate-items">
+        <a href="#"><i class="fa fa-check" aria-hidden="true"></i>Issues</a>
+      </li>
+      <li>
+        <a href="#"><img src="/assets/playground_assets/vector3635-plpw.svg">Sites Monitoring</a>
+      </li>
+      <li class="seul-phrase">
+        <a href="#"> <img src="/assets/playground_assets/uilanalysis3636-eb79.svg">Affiliate rank tracher</a>
+      </li>
+      <li class="seul-phrase">
+        <a routerLink="../custumlink"><img src="/assets/playground_assets/vector3636-ynyo.svg">Custom link checker</a>
+      </li>
+      <li class="seul-phrase">
+        <a href="#"><i class="fa fa-stop-circle-o" aria-hidden="true"></i>Watch our guides</a>
+      </li>
+      <li>
+        <a href="#"><img src="/assets/playground_assets/vector3637-ww3.svg">Pricing</a>
+      </li>
+      <li >
+        <a href="#"> <img src="/assets/playground_assets/vector3638-k41.svg">Get Help</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+           <input placeholder="  search" class="searchnar-box" >
+        </div>
+    </nav>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+    });
+  });
+</script>
+  </div> </div>
+
+
+</html>

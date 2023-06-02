@@ -1,0 +1,200 @@
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-MediumItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BoldItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-BookItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Book.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Book.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Black.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:Circular Std ;
+  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url('src/app/css/fonts/CircularStd-Bold.woff2') format('woff2'),
+  url('src/app/css/fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --main-bg-color: #503E9D;
+  --font-primary: Circular Std;
+}
+
+
+/* Styles pour la version bureau */
+
+
+.custumLinkBox {
+  Width :704px;
+  Height :191px;
+  padding-top :15%;
+  padding-left: 30%;
+
+}
+
+.custum-link-chiker {
+  padding-left: 70%;
+  padding-top: 20%;
+  white-space: nowrap;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51px;
+  color: #000000;
+}
+
+.insertionBox {
+
+  width: 890px;
+  height: 48px;
+  padding-top: 20%;
+  padding-left: 60%;
+}
+
+.input-class {
+  width: 550px;
+  height: 48px;
+}
+
+.button-class {
+  width: 154px;
+  height: 48px;
+  background: #503E9D;
+  color: white;
+}
+
+a {
+  all: unset;
+}
+
+input {
+  border: none;
+  font-family: Circular Std;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #503E9D;
+}
+
+/* Styles pour la version mobile */
+@media screen and (max-width: 600px) {
+  .contenu {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
+
+  .custumLinkBox {
+    width: 100%;
+    height: auto;
+    top: unset;
+    left: unset;
+  }
+
+  .custum-link-chiker {
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    left: -15%;
+    top: unset;
+    word-wrap: break-word;
+    white-space: pre-line;
+  }
+
+  .insertionBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: unset;
+    top: unset;
+  }
+
+  .input-class {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .button-class {
+    width: 80%;
+    height: auto;
+    background: #503E9D;
+    color: white;
+  }
+
+  a {
+    all: unset;
+  }
+
+  input {
+    border: none;
+    font-family: Circular Std;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #503E9D;
+  }
+}

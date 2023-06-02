@@ -1,0 +1,27 @@
+.navbar{
+  background-color: #503E9D;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+a{
+  color: white;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  flex-wrap: nowrap;
+}
+li{
+  padding: 1rem;
+}
+
+li:hover{
+  cursor: pointer;
+  background-color: #dedede;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,23 @@
+.dashboard {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+}
+.dashboard .content {
+  position: relative;
+  width: 100%;
+  margin-left: 250px;
+  margin-block: 0;
+  padding: 0;
+  transition: 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+@media screen and (width < 700px) {
+  .dashboard .content {
+    margin-left: 0;
+  }
+}

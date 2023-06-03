@@ -27,6 +27,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {LoginComponent} from "./view/login/login.component";
 import {JwtInterceptor} from "./controler/interceptors/jwt.interceptor";
+import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.component';
+import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-sidebar.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import {JwtInterceptor} from "./controler/interceptors/jwt.interceptor";
     SearchComponent,
     HomeClientComponent,
     FooterNavComponent,
+    WithSidebarComponent,
+    WithoutSidebarComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,41 +15,38 @@ import {SideMenuSearchComponent} from "./view/side-menu-search/side-menu-search.
 import {LinkWebComponent} from "./view/link-web/link-web.component";
 import {HomeClientComponent} from "./view/home-client/home-client.component";
 import {LoginComponent} from "./view/login/login.component";
+import {WithoutSidebarComponent} from "./view/pages/without-sidebar/without-sidebar.component";
+import {WithSidebarComponent} from "./view/pages/with-sidebar/with-sidebar.component";
 
 
 const routes: Routes = [
   {
-    path:'' , component:HomeClientComponent,
-    children:[
-      {
-        path:'login', component:LoginComponent
-      },
-      {
-        path:'register', component:RegisterComponent
-      },
-      {
-        path:'summary' , component:SummaryComponent
-      },
-      {
-        path:'sites' , component:SitesComponent
-      },
-      {
-        path:'issues' , component:IssuesComponent
-      },
-      {
-        path:'link-web' , component:LinkWebComponent
-      },
-      {
-        path:'guides' , component:GuidesComponent
-      },
-      {
-        path:'contact-us' , component:ContactUsComponent
-      },
-      {
-        path:'custom' , component:CustomLinkChekerComponent
-      },
+    path:'' ,
+    redirectTo: "register",
+    pathMatch: "full"
+  },
+  {
+    path:'' ,
+    component: WithoutSidebarComponent,
+    children: [
+      {path:'login', component:LoginComponent},
+      {path:'register', component:RegisterComponent},
+      {path:'link-web' , component:LinkWebComponent},
     ]
   },
+  {
+    path:'dashboard' ,
+    component: WithSidebarComponent,
+    children: [
+      {path:'summary' , component:SummaryComponent},
+      {path:'sites' , component:SitesComponent},
+      {path:'issues' , component:IssuesComponent},
+      {path:'guides' , component:GuidesComponent},
+      {path:'contact-us' , component:ContactUsComponent},
+      {path:'custom' , component:CustomLinkChekerComponent},
+    ]
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

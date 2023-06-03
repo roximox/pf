@@ -1,83 +1,80 @@
+<aside [class]="{'active': showSidebar}">
 
-  <!-- To copy in every page -->
-  <style>
-  @media screen and (max-width: 576px) {
-    #sidebar{
-      display: none;
-    }
-  }
-  </style>
+  <i class="fa fa-x hide-sidebar" (click)="hideSideBar()"></i>
 
+  <div class="logo"><img src="assets/slinker_titre.png" alt=""></div>
+  <hr>
 
-<div class="container-fluid">
-  <div class="row d-flex d-md-block flex-nowrap wrapper ">
-    <div id="sidebar">
-      <div class="list-group border-0 card text-center text-md-left">
-       <!-- <div class="scroll-pane">-->
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <img
-            src="assets/playground_assets2/logowhite1920x813632-afko-200h.png"
-            class="slinker-icon">
-          <span class="d-none d-md-inline sidbar-titre">Slinker</span>
+  <nav>
+    <ul>
+      <li>
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/dashboard">
+          <i class="fa fa-chart-bar"></i> <span>Dashboard</span>
         </a>
-        <a routerLink="/sites"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <img src="/assets/playground_assets/vector3633-d2ol.svg">
-          <span class="d-none d-md-inline">Sites</span>
+      </li>
+      <li>
+        <a routerLinkActive="active"  routerLink="/dashboard/summary">
+          <i class="fa fa-user-circle"></i> <span>Profile</span>
         </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <img src="/assets/playground_assets/favicon32x3213634-sugd-200w.png">
-          <span class="d-none d-md-inline">eysi.net</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <img src="/assets/playground_assets/vector3633-3gk.svg">
-          <span class="d-none d-md-inline">Dashboard</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <img src="/assets/playground_assets/vector3634-n2k.svg">
-          <span class="d-none d-md-inline">Affiliate audit</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <i class="fa fa-gear"></i>
-          <span class="d-none d-md-inline">Sites Monitoring</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <i class="fa fa-calendar"></i>
-          <span class="d-none d-md-inline">Afiiliate Rank tracker</span>
-        </a>
-        <a routerLink="/custom"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <i class="fa fa-envelope"></i>
-          <span class="d-none d-md-inline">Custom link checker</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <i class="fa fa-bar-chart-o"></i>
-          <span class="d-none d-md-inline">Watch Our guides</span>
-        </a>
-        <a routerLink="#"
-           class="list-group-item d-inline-block collapsed"
-           data-parent="#sidebar">
-          <i class="fa fa-star"></i>
-          <span class="d-none d-md-inline">Pricing</span>
-        </a>
-      </div>
-      </div>
-    </div>
-  </div>
+      </li>
+    </ul>
 
+    <hr>
+
+    <ul>
+      <li>
+        <a routerLinkActive="active" routerLink="/link-web">
+          <i class="fa fa-flask-vial"></i> <span>link-web</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/dashboard/sites">
+          <i class="fa fa-users"></i> <span>site</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="baseUrl + '/clients'">
+          <i class="fa fa-user-shield"></i> <span>Clients</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="baseUrl + '/files'">
+          <i class="fa fa-file-lines"></i> <span>files</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="baseUrl + '/history'">
+          <i class="fa fa-bell notification new"></i> <span>History</span>
+        </a>
+      </li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li>
+        <a routerLinkActive="active" [routerLink]="baseUrl + '/setting'">
+          <i class="fa fa-gear"></i> <span>Setting</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/login">
+          <i class="fa fa-sign-in"></i> <span>Sign In</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-sign-out"></i> <span>Sign out</span>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+</aside>
+
+<div class="overlay-bg" (click)="hideSideBar()"></div>
+
+<div class="show-sidebar" (click)="showSideBar()">
+  <i class="fa fa-angle-right"></i>
+</div>

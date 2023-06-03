@@ -20,6 +20,7 @@ export class JwtInterceptor implements HttpInterceptor {
         setHeaders: {
           Authorization: `${token}`
         }
+
       });
     }
 

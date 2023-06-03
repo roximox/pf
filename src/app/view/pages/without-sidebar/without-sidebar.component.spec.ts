@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidbarComponent } from './sidbar.component';
+import { WithoutSidebarComponent } from './without-sidebar.component';
 
-describe('SidbarComponent', () => {
-  let component: SidbarComponent;
-  let fixture: ComponentFixture<SidbarComponent>;
+describe('WithoutSidebarComponent', () => {
+  let component: WithoutSidebarComponent;
+  let fixture: ComponentFixture<WithoutSidebarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidbarComponent ]
+      declarations: [ WithoutSidebarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SidbarComponent);
+    fixture = TestBed.createComponent(WithoutSidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

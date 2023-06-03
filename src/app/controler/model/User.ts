@@ -7,4 +7,5 @@ export class User {
 
   public userLastName!: String;
   public userPassword!:String;
+
 }

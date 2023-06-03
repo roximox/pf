@@ -18,7 +18,7 @@ export class LoginService {
   }
 
   public signin(jwtRequest: JwtRequest): Observable<JwtResponse> {
-    return this.http.post<JwtResponse>("http://localhost:8036/authenticate", jwtRequest);
+    return this.http.post<JwtResponse> ("http://localhost:8036/authenticate", jwtRequest);
   }
 }
   /*

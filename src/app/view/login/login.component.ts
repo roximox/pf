@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import {LoginService} from "../../controler/service/login.service";
 import {User} from "../../controler/model/User";
 import {JwtRequest} from "../../controler/model/JwtRequest";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-patient-create',
@@ -14,13 +15,15 @@ export class LoginComponent {
   jwtRequest = new JwtRequest();
 
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService,
+              private router: Router) {}
 
   save() {
     this.loginService.signin(this.jwtRequest)
       .subscribe({
         next: value => {
           localStorage.setItem("token", value.jwtToken)
+          this.router.navigate(["link-web"])
         }
       })
   }

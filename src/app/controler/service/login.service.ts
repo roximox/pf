@@ -1,27 +1,33 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
-import {JwtRequest} from "../model/JwtRequest";
-import {User} from "../model/User";
-import {JwtResponse} from "../model/jwt-response.model";
-import {HttpClient} from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { JwtRequest } from '../model/JwtRequest';
+import { User } from '../model/User';
+import { JwtResponse } from '../model/jwt-response.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
-  constructor(private http: HttpClient) {
-  }
-
+  public authenticated =
+    <boolean>JSON.parse(localStorage.getItem('autenticated')) || false;
+  constructor(private http: HttpClient) {}
 
   public signup(user: User): Observable<JwtResponse> {
-    return this.http.post<JwtResponse>("http://localhost:8036/registerNewUser", user);
+    return this.http.post<JwtResponse>(
+      'http://localhost:8036/registerNewUser',
+      user
+    );
   }
 
   public signin(jwtRequest: JwtRequest): Observable<JwtResponse> {
-    return this.http.post<JwtResponse> ("http://localhost:8036/authenticate", jwtRequest);
+    return this.http.post<JwtResponse>(
+      'http://localhost:8036/authenticate',
+      jwtRequest
+    );
   }
 }
-  /*
+/*
   private _login!:Login;
   private  _logins!: Array<Login>;
   private url = environment.BaseUrl + 'login/';

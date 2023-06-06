@@ -17,6 +17,7 @@ import { HomeClientComponent } from './view/home-client/home-client.component';
 import { LoginComponent } from './view/login/login.component';
 import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-sidebar.component';
 import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.component';
+import { AuthGuard } from './controler/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: WithSidebarComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'summary', component: SummaryComponent },
       { path: 'sites', component: SitesComponent },

@@ -20,7 +20,6 @@ export class RegisterComponent {
         next: value => {
           console.log(value)
           this.router.navigate(["login"])
-
         }
       })
   }

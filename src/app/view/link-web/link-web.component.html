@@ -1,13 +1,12 @@
 <div class="page">
-
   <div class="header">
     <div>
-      <img src="assets/playground_assets2/logowhite1920x813632-afko-200h.png" class="slinker-icon">
-      Slinker
+      <img src="../../../assets/Group_28.svg" class="slinker-icon" />
     </div>
-    <div>
-      <i class="fa fa-user"></i>
-      <span>3</span>
+
+    <div class="left_header">
+      <img class="vector" src="../../../assets/Vector.svg" alt="">
+      <div class="num"><p>3</p></div>
     </div>
   </div>
 
@@ -15,13 +14,18 @@
     <h1 class="titre">Enter Your website</h1>
     <p class="sous-titre">Welcome to Slinker !</p>
     <div class="zone-de-saisie">
-      <input class="input-insert" placeholder="Enter your domain to check affiliate’s links">
-      <button class="button-insert" routerLink="../summary">Analyse</button>
+      <input
+        class="input-insert"
+        name="url"
+        [(ngModel)]="savedWebsite.url"
+        placeholder="Enter your domain to check affiliate’s links"
+      />
+      <!-- summary -->
+      <button class="button-insert" (click)="ScrapingData()">Analyse</button>
     </div>
   </div>
 
   <div class="bottom-half">
     <button class="update-button" routerLink="../pricing">Upgrade Plan</button>
   </div>
-
 </div>

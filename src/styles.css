@@ -1,3 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 
+:root {
+    --main-bg-color: #503E9D;
+    --font-primary: Circular Std;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

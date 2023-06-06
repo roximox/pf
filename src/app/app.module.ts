@@ -29,6 +29,7 @@ import {LoginComponent} from "./view/login/login.component";
 import {JwtInterceptor} from "./controler/interceptors/jwt.interceptor";
 import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.component';
 import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-sidebar.component';
+import { DashnavbarComponent } from './view/dashnavbar/dashnavbar.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-si
     FooterNavComponent,
     WithSidebarComponent,
     WithoutSidebarComponent,
+    DashnavbarComponent,
   ],
   imports: [
     BrowserModule,

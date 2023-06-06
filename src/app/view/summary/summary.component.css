@@ -1,112 +1,40 @@
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-MediumItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-MediumItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BoldItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BookItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Book.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Book.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Black.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family:Circular Std ;
-  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Bold.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-:root {
-  --main-bg-color: #503E9D;
-  --font-primary: Circular Std;
-}
-
 .page {
   display: flex;
-  background: hsl(0 0% 95% / 1);
+  background-color: #e5e5e5 !important;
 }
+
 .page .contenu {
   flex-grow: 1;
 }
 
 .contenu {
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 10px 20px;
+}
+
+.summuray-titre {
+  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .box {
-  box-shadow: 0 0 10px #bfbfbffc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  flex: 1;
+  background-color: white;
 }
 
-.summuray-titre{
-  margin-top: 20px;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.repot-compelet-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-.repot-compelet-box > * {
-  flex-grow: 1;
-}
-.repot-compelet-box .repot-compelet{
-  flex-basis: 80%;
+.repot-compelet-box .repot-compelet {
   position: relative;
-  padding: 10px 10px 10px 20px;
-}
-.repot-compelet-box {
-  flex-basis: 80%;
-  min-width: 200px;
+  padding: 15px;
 }
 
 .repot-compelet i {
@@ -115,9 +43,109 @@
   top: 10px;
 }
 
-.repot-compelet-text{
+.repot-compelet-text {
+  display: flex;
+  gap: 10px;
   font-size: 25px;
-  color: #31BA86;
+  color: #31ba86;
+  margin-bottom: 10px;
+}
+
+.wrapper .right-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.button-wrapper .recheck-button,
+.button-wrapper .download-button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 15px 0px;
+}
+
+.button-wrapper .recheck-button {
+  background-color: #31ba86;
+  color: white;
+}
+
+.button-wrapper .download-button {
+  background-color: white;
+  color: #31ba86;
+}
+
+.upgrade-rectangle {
+  text-align: center;
+  padding: 10px 10px;
+  background: #503e9d;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.upgrade-paragraphe {
+  font-size: 0.8rem;
+}
+
+.upgrade-rectangle button {
+  color: #503e9d;
+  background: #fff;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .upgrade-rectangle {
+    display: none;
+    flex-basis: 100%;
+  }
+  .download-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: smaller;
+  }
+  .recheck-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: smaller;
+  }
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .repot-compelet {
+    font-size: smaller;
+  }
 }
 
 .buttons img {
@@ -125,44 +153,43 @@
 }
 
 @media (width < 990px) {
-
   .buttons {
     text-align: center;
     display: flex;
   }
-
 }
 
-.upgrade-rectangle{
+.ALL {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10px;
-  background: #503E9D;
-  color: #fff;
+  gap: 50px;
 }
 
-.upgrade-button {
-  background: #fff;
-  padding: 5px 20px;
-  border-radius: 20px;
-  border: none;
+/* Products */
+.products {
+  flex: 1;
+  background-color: white;
+  box-shadow: 0px 15px 30px rgba(87, 105, 177, 0.06);
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 1px;
 }
 
-.amazon-products-titre{
-  font-size: 30px;
-  margin-top: 10px;
+.products .amazon-products-titre {
+  font-size: 1.3rem;
+}
+
+.products .table {
+  padding: 20px;
 }
 
 .space-between {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   font-weight: 500;
   font-size: 20px;
   padding-block: 10px;
 }
-
 
 .space-between span {
   color: #788089;
@@ -173,7 +200,16 @@
 }
 
 .space-between span.purple {
-  color: #503E9D;
+  color: #503e9d;
+}
+
+.space-between .input {
+  width: 40%;
+}
+
+.space-between .input .boxSizing {
+  width: 60%;
+  border-radius: 4px;
 }
 
 .input span {
@@ -194,29 +230,33 @@ table tr td {
   vertical-align: middle;
   text-align: center;
 }
-table tr td span{
+table tr td span {
   color: white;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 14px
-
+  font-size: 14px;
 }
-table tr td.red span{
+table tr td.red span {
   background: red;
 }
 
-table tr td.gray span{
+table tr td.gray span {
   background: gray;
 }
 
-table tr td.green span{
+table tr td.green span {
   background: green;
 }
-table tr td.blue span{
+table tr td.blue span {
   background: darkblue;
 }
 
-.statistics, .statistics > div > div {
+.statistics {
+  flex: 1;
+}
+
+.statistics,
+.statistics > div > div {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;

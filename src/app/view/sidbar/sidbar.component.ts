@@ -1,24 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidbar',
   templateUrl: './sidbar.component.html',
-  styleUrls: ['./sidbar.component.scss']
+  styleUrls: ['./sidbar.component.scss'],
 })
 export class SidbarComponent implements OnInit {
-  showSidebar = false;
   baseUrl!: string | null;
+  openAffiliateAudit = false;
 
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  showSideBar() {
-    this.showSidebar = true;
-  }
-
-  hideSideBar() {
-    this.showSidebar = false;
+  toggleAffiliateAudit() {
+    this.openAffiliateAudit = !this.openAffiliateAudit;
   }
 }

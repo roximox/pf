@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { Result } from 'src/app/controler/model/result.model';
 import { Website } from 'src/app/controler/model/website.model';
@@ -13,7 +14,8 @@ import { WebSiteService } from 'src/app/controler/service/web-site.service';
 export class LinkWebComponent implements OnInit {
   constructor(
     private webSiteService: WebSiteService,
-    private webScraperService: WebScraperService
+    private webScraperService: WebScraperService,
+    private route: Router,
   ) {}
   ngOnInit(): void {}
 
@@ -36,6 +38,7 @@ export class LinkWebComponent implements OnInit {
     return products;
   }
 
+  // Main Function
   async ScrapingData() {
     // Final Url
     const url = new URL(this.savedWebsite.url);
@@ -50,8 +53,8 @@ export class LinkWebComponent implements OnInit {
 
     // Fetch Amazon Products
     this.results = await this.fetchAmazonProducts(this.loadedWebsite.id);
-    alert('Done');
-    console.log(this.results);
+    
+    this.route.navigate(["load"]);
   }
 
   // Getters && Setters

@@ -1,80 +1,93 @@
-<aside [class]="{'active': showSidebar}">
-
-  <i class="fa fa-x hide-sidebar" (click)="hideSideBar()"></i>
-
-  <div class="logo"><img src="assets/slinker_titre.png" alt=""></div>
-  <hr>
+<aside>
+  <div class="logo">
+    <img src="../../../assets/link-web/Group_28.svg" alt="" />
+  </div>
 
   <nav>
     <ul>
       <li>
-        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/dashboard">
-          <i class="fa fa-chart-bar"></i> <span>Dashboard</span>
-        </a>
-      </li>
-      <li>
-        <a routerLinkActive="active"  routerLink="/dashboard/summary">
-          <i class="fa fa-user-circle"></i> <span>Profile</span>
+        <a routerLinkActive="active" routerLink="/sites">
+          <img src="../../../assets/icons_sidebar/Vector-2.svg" alt="" />
+          <span>Sites</span>
         </a>
       </li>
     </ul>
 
-    <hr>
+    <hr />
 
     <ul>
       <li>
+        <a
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/dashboard"
+        >
+          <img src="../../../assets/icons_sidebar/Vector.svg" alt="" />
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" (click)="toggleAffiliateAudit()">
+          <img src="../../../assets/icons_sidebar/Vector-9.svg" alt="" />
+          <span>Affiliate audit</span>
+        </a>
+
+        <ul *ngIf="openAffiliateAudit">
+          <li>
+            <a routerLinkActive="active" routerLink="/dashboard/summary">
+              <span>Summary</span>
+            </a>
+          </li>
+
+          <li>
+            <a routerLinkActive="active" routerLink="/dashboard/issues">
+              <span>Issues</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
         <a routerLinkActive="active" routerLink="/link-web">
-          <i class="fa fa-flask-vial"></i> <span>link-web</span>
+          <img src="../../../assets/icons_sidebar/Vector-3.svg" alt="" />
+          <span>Sites Monitoring</span>
         </a>
       </li>
       <li>
         <a routerLinkActive="active" routerLink="/dashboard/sites">
-          <i class="fa fa-users"></i> <span>site</span>
+          <img src="../../../assets/icons_sidebar/Vector-4.svg" alt="" />
+          <span>Afiiliate Rank tracker</span>
         </a>
       </li>
       <li>
         <a routerLinkActive="active" [routerLink]="baseUrl + '/clients'">
-          <i class="fa fa-user-shield"></i> <span>Clients</span>
+          <img src="../../../assets/icons_sidebar/Vector-5.svg" alt="" /><span
+            >Custom link checker</span
+          >
         </a>
       </li>
+    </ul>
+
+    <hr />
+
+    <ul>
       <li>
         <a routerLinkActive="active" [routerLink]="baseUrl + '/files'">
-          <i class="fa fa-file-lines"></i> <span>files</span>
+          <img src="../../../assets/icons_sidebar/Vector-7.svg" alt="" />
+          <span>Watch Our guides</span>
         </a>
       </li>
       <li>
         <a routerLinkActive="active" [routerLink]="baseUrl + '/history'">
-          <i class="fa fa-bell notification new"></i> <span>History</span>
+          <img src="../../../assets/icons_sidebar/Vector-6.svg" alt="" />
+          <span>Pricing</span>
         </a>
       </li>
-    </ul>
-
-    <hr>
-
-    <ul>
       <li>
         <a routerLinkActive="active" [routerLink]="baseUrl + '/setting'">
-          <i class="fa fa-gear"></i> <span>Setting</span>
-        </a>
-      </li>
-      <li>
-        <a routerLinkActive="active" routerLink="/login">
-          <i class="fa fa-sign-in"></i> <span>Sign In</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <i class="fa fa-sign-out"></i> <span>Sign out</span>
+          <img src="../../../assets/icons_sidebar/Vector-8.svg" alt="" />
+          <span>Get Help</span>
         </a>
       </li>
     </ul>
-
   </nav>
-
 </aside>
-
-<div class="overlay-bg" (click)="hideSideBar()"></div>
-
-<div class="show-sidebar" (click)="showSideBar()">
-  <i class="fa fa-angle-right"></i>
-</div>

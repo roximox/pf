@@ -1,0 +1,51 @@
+.dashnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  height: 10vh;
+  padding-inline: 15px;
+
+  .left-side {
+    flex: 1;
+    button {
+      margin-right: 10px;
+      padding: 2px;
+      outline: none;
+      border: none;
+      background-color: white;
+      img {
+        width: 15px;
+        height: 15x;
+      }
+    }
+
+    input {
+      border: none;
+      outline: none;
+      width: 50%;
+      color: rgba(87, 105, 177, 1);
+    }
+  }
+
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    img {
+      height: 15x;
+      width: 15px;
+    }
+
+    p {
+      margin: 0;
+      background: rgba(197, 173, 210, 1);
+      padding: 2px 8px;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+}

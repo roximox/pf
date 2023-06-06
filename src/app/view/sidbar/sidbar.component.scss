@@ -1,62 +1,108 @@
-$bg-black: #503E9D;
+$bg-black: rgba(80, 62, 157, 1);
+
+/* Hide the scroll bar */
+::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+/* For webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
 
 aside {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+
   width: 250px;
   height: 100vh;
+
   position: absolute;
   z-index: 100;
   top: 0;
   left: 0;
+
   padding-bottom: 10px;
-  border-radius: .5rem;
   background: $bg-black;
   color: #fff;
+
   overflow-x: hidden;
-  overflow-y: auto;
-  transition: .3s;
+  overflow-y: visible;
+  transition: 0.3s;
 
   * {
     white-space: nowrap;
   }
 
-  // scroll bar for mozila browser
-  scrollbar-width: thin;
-  scrollbar-color: #D9D9D9 $bg-black;
-
   .logo {
-    padding: 24px 32px 8px;
+    width: 100%;
     text-align: center;
     font-size: 2rem;
+    margin-block: 20px 60px;
+    img {
+      width: 50%;
+    }
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-inline: 10px;
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
 
-    li a {
-      display: block;
-      padding: 10px 20px;
-      width: 100%;
-      border-radius: 5px;
-      color: rgb(255, 255, 255);
-      cursor: pointer;
+      list-style: none;
+      padding: 0;
 
-      span {
-        margin-left: 15px;
-      }
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-      &:hover {
-        background-color: rgba(#fff,.2);
-      }
+        width: 100%;
 
-      &.active {
-        background: linear-gradient(
-            195deg,
-            rgb(73, 163, 241),
-            rgb(26, 115, 232)
-        );
+        a {
+          display: block;
+          padding: 10px;
+          width: 100%;
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          cursor: pointer;
+
+          img {
+            width: 15px;
+            margin-left: 25px;
+          }
+
+          span {
+            font-size: 1rem;
+            margin-left: 25px;
+          }
+
+          &:hover {
+            background-color: rgba(#fff, 0.2);
+          }
+
+          &.active {
+            background: rgba(87, 105, 177, 0.5);
+            backdrop-filter: blur(35px);
+          }
+        }
+        ul {
+          width: 100%;
+          gap: 0;
+          li {
+            a {
+              display: block;
+              width: 100%;
+              padding-left: 45px;
+            }
+          }
+        }
       }
     }
   }
@@ -90,8 +136,8 @@ aside {
   border-radius: 0 40px 40px 0;
   background-image: $bg-black;
   color: #fff;
-  opacity: .5;
-  transition: .3s linear;
+  opacity: 0.5;
+  transition: 0.3s linear;
   cursor: pointer;
 
   &:hover {
@@ -124,10 +170,10 @@ hr {
   margin: 1rem 0;
   opacity: 0.25;
   background-color: transparent;
-  background-image:
-    linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgb(255, 255, 255),
-        rgba(255, 255, 255, 0)) !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  ) !important;
 }

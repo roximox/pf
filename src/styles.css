@@ -1,4 +1,6 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 @import url(https://mega.nz/folder/UIRVnSCS#7ZtbdgD3hc9jdBnSxFqZlw);
 

@@ -1,169 +1,314 @@
-<app-side-menu-search></app-side-menu-search>
-<div class="contenu">
-  <div class="summuray-titre">Custom link checker</div>
-  <div class="repot-compelet">
-    <div class="repot-compelet-text">Report completed</div>
-    <div class="report-text">Please subscribe to Slinker to get access to full features and find broken links on your site
+<style>
+
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .upgrade-rectangle{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-wrapper{
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 576px) {
+
+    .button-wrapper{
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    .upgrade-rectangle{
+      display: none;
+      flex-basis: 100%;
+    }
+    .download-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-size: smaller;
+    }
+    .recheck-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-size: smaller;
+
+    }
+    li{
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .repot-compelet{
+      font-size: smaller;
+    }
+  }
+
+  .recheck-button{
+    flex-basis: 25%;
+    background-color: #31BA86;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .download-button{
+    flex-basis: 25%;
+    background-color: white;
+    color:  #31BA86;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+  }
+
+</style>
+<div class="page">
+  <div class="contenu">
+    <h2 class="summuray-titre">Custom Link checker</h2>
+    <div class="repot-compelet-box">
+      <div class="wrapper">
+        <div class="repot-compelet box">
+          <div class="repot-compelet-text"> You must repaire alot of links</div>
+          <div class="report-text">Please subscribe to Slinker to get access to full features and find broken links on your site
+          </div>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+
+        <div class="button-wrapper">
+          <div ><a href="#">
+            <button class="recheck-button">
+              <img  width="15" src="/assets/recheck.svg" alt="" srcset="">
+              <p  style="margin-top: 1rem !important;"> Recheck </p>
+            </button>
+          </a>
+          </div>
+
+          <div ><a href="#">
+            <button class="download-button">
+              <img width="15" src="/assets/download.svg" alt="" srcset="">
+              <p style="margin-top: 1rem !important;"> Download </p>
+            </button>
+          </a>
+          </div>
+
+        </div>
+
+        <div class="upgrade-rectangle box">
+          <div class="upgrade-paragraphe"> Improve Managment by upgrading your account</div>
+          <button routerLink="../pricing" class="upgrade-button"> Upgrade </button>
+        </div>
+
+      </div>
+
     </div>
-    <div class="trois-point">...</div>
-  </div>
-  <div ><a href="#"><img src="assets/recheck.png" class="recheck"></a></div>
-  <div><a href="#"><img src="../../../assets/download-icon1.png" class="download"></a></div>
-  <div class="upgrade-rectangle">
-    <div class="upgrade-paragraphe"> Improve Managment by upgrading your account</div>
-    <div>
-      <button class="upgrade-button">
-        <div class="upgrade-text"><a routerLink="../pricing">Upgrade</a></div>
-      </button> </div>
-  </div>
-  <div class="custumLinkBox" >
-    <div class="custum-link-chiker">
-      <span>Custom link </span>
+    <div class="inputBox">
+      <input placeholder="        Enter your webe Site">
+      <button class=" btn-insert"><i class="fa fa-search "></i></button>
     </div>
-    <div class="insertionBox">
-      <span><input class="input-class"  placeholder="eysi.net"></span>
-      <span><button class="button-class btn-primary"><a routerLink="../summary">Insert</a></button> </span>
+
+    <div class="amazon-products-titre">Amazon products</div>
+
+    <div class="space-between">
+      <span class="purple">statues:</span>
+      <span class="active">All</span>
+      <span>Available</span>
+      <span>Unavailable</span>
+      <span>404</span>
+      <div class="input">
+        <span class="purple">Affiliate Id</span>
+        <select class="boxSizing">
+          <option>All</option>
+          <option>Available</option>
+          <option>Unavailable</option>
+          <option>404</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-container-h">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>Image</th>
+          <th>Procduct name</th>
+          <th>Product staut</th>
+          <th>Reviews</th>
+          <th>Affiliate Id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="green">
+            <span>AVAILABLE</span>
+          </td>
+          <td>3.7 (42 reviews)</td>
+          <td class="blue">
+            <div class="affiliate-text1"><span>ge2kliam22</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="red">
+            <span>UNAVAILABLE</span>
+          </td>
+          <td>3.7 (42 reviews)</td>
+          <td class="blue">
+            <span>ge2kliam22</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="gray">
+            <span>PAGE 404</span>
+          </td>
+          <td>3.7 (42 reviews)</td>
+          <td class="blue">
+            <span>ge2kliam22</span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="statistics">
+      <div>
+        <h4 class="title">site metrices</h4>
+        <div>
+          <div class="box">
+            <img src="assets/files.jpeg" alt="">
+            <span class="number">1</span>
+            <span class="text">ID Checked</span>
+          </div>
+          <div class="box">
+            <img src="assets/settings.jpeg" alt="">
+            <span class="number">250</span>
+            <span class="text">Pages Processed</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 class="title">crawl details</h4>
+        <div>
+          <div class="box">
+            <img src="assets/agenda.jpg" alt="">
+            <span class="number">03/20</span>
+            <span class="text">Crawling Date Started</span>
+          </div>
+          <div class="box">
+            <img src="assets/time.jpeg" alt="">
+            <span class="number">3 min</span>
+            <span class="text">Time Elapsed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="summuray-titre">Amazon Similar  Products</h2>
+    <div class="links-table-container">
+      <table class="table">
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="blue">
+            <span>View</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="blue">
+            <span>View</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="blue">
+            <span>View</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="blue">
+            <span>View</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="assets/produit.png" class="image1">
+          </td>
+          <td>
+            Nair Hair Remover for Men
+            Hair Remover Body Cream, 13 oz
+          </td>
+          <td class="blue">
+            <span>View</span>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
-  <div class="site-metrice">site metrices</div>
-  <div class="page-checked"></div>
-  <div class="nbr1">110</div>
-  <div class="page-cheched-text">Pages Checked</div>
-  <div class="link-processed"></div>
-  <div class="nbr2">250</div>
-  <div class="link-processed-text">Links Processed</div>
-  <div class="crawl-details">crawl details</div>
-  <div class="calendrier"></div>
-  <div class="nbr3">03/20</div>
-  <div class="calendrier-text">Crawling Date Started</div>
-  <div class="time"></div>
-  <div class="nbr4">3 min</div>
-  <div class="time-text">Time Elapsed</div>
-  <p class="amazon-products-titre">Amazon products</p>
-  <table class="amazon-products-rectangle">
-    <thead class="items-titre">
-    <tr>
-      <td class="statues">statues:</td>
-      <td class="all">All</td>
-      <td class="available">Available</td>
-      <td class="unavailable">Unavailable</td>
-      <td class="notfound">404</td>
-      <td class="affiliateId">Affiliate Id</td>
-      <td><input class="boxSizing"> <i class="fa fa-caret-down dropdown" aria-hidden="true"></i></td>
-    </tr>
-      <tr class="items-ligne"></tr>
-      <tr>
-        <td class="image">Image</td>
-      <td class="product-name">Procduct name</td>
-      <div class="product-statu">Product staut</div>
-      <div class="reviews">Reviews</div>
-      <div class="affiliateId2">Affiliate Id</div>
-    </tr>
-    </thead>
-    <tbody>
-    <tr><img src="assets/produit.png" class="image1"></tr>
-    <tr class="name1">Nair Hair Remover for Men
-      Hair Remover Body Cream,
-      13 oz</tr>
-    <tr class="statut-espace1">
-      <div class="stau1-text">AVAILABLE</div>
-    </tr>
-    <tr class="review1">3.7 (42 reviews)</tr>
-    <tr class="affiliate-espace1">
-      <div class="affiliate-text1">ge2kliam22</div>
-    </tr>
-    <tr class="ligne1"></tr>
-    <tr><img src="assets/produit.png" class="image2"></tr>
-    <tr class="product-name2">Aveeno Facial Moisturizers
-      Clear Complexion BB Cream,
-      Fair To Light, 2.5 Fluid ...</tr>
-    <tr class="statut-espace2">
-      <div class="stau2-text">UNAVAILABLE</div>
-    </tr>
-    <tr class="review2">3.7 (42 reviews)</tr>
-    <tr class="affiliate-espace2">
-      <div class="affiliate-text2">ge2kliam22</div>
-    </tr>
-    <tr class="ligne2"></tr>
-    <tr><img src="assets/produit.png" class="image3"></tr>
-    <tr class="product-name3">Aveeno Facial Moisturizers
-      Clear Complexion BB Cream,
-      Fair To Light, 2.5 Fluid ...</tr>
-    <tr class="statut-espace3">
-      <div class="stau3-text">UNAVAILABLE</div>
-    </tr>
-    <tr class="review3">3.7 (42 reviews)</tr>
-    <tr class="affiliate-espace3">
-      <div class="affiliate-text3">ge2kliam22</div>
-    </tr>
-    <tr><img src="assets/produit.png" class="image4"></tr>
-    <tr class="product-name4">Aveeno Facial Moisturizers
-      Clear Complexion BB Cream,
-      Fair To Light, 2.5 Fluid ...</tr>
-    <tr class="statut-espace4">
-      <div class="stau4-text">UNAVAILABLE</div>
-    </tr>
-    <tr class="review4">3.7 (42 reviews)</tr>
-    <tr class="affiliate-espace4">
-      <div class="affiliate-text4">ge2kliam22</div>
-    </tr>
-    <tr class="upgrade-box">
-      <button class="upgrade-button2">
-        <span class="text-upgrade"><a routerLink="../pricing">updrade</a></span>
-      </button>
-    </tr>
-    </tbody>
-  </table>
-  <p class="affiliate-link-text">Affiliate Links detected</p>
-  <div class="table-container">
-    <table>
-      <tbody>
-      <tr>
-        <td >https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <tr class="tableau-ligne"></tr>
-      <tr>
-        <td>https://eysi.net</td>
-      </tr>
-      <!-- Ajoutez autant de lignes que nécessaire -->
-      </tbody>
-    </table>
-  </div>
-  <div class="box-transparante"></div>
 </div>

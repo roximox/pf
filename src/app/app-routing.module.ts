@@ -18,6 +18,8 @@ import { LoginComponent } from './view/login/login.component';
 import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-sidebar.component';
 import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.component';
 import { AuthGuard } from './controler/auth/auth.guard';
+import {NotFoundComponent} from "./view/not-found/not-found.component";
+import {CustumLinkCheckComponent} from "./view/custum-link-check/custum-link-check.component";
 
 const routes: Routes = [
   {
@@ -33,6 +35,7 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'link-web', component: LinkWebComponent },
       { path: 'load', component: LoadPageComponent },
+      { path: 'contact-us', component: ContactUsComponent },
     ],
   },
   {
@@ -44,10 +47,14 @@ const routes: Routes = [
       { path: 'sites', component: SitesComponent },
       { path: 'issues', component: IssuesComponent },
       { path: 'guides', component: GuidesComponent },
-      { path: 'contact-us', component: ContactUsComponent },
       { path: 'custom', component: CustomLinkChekerComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'custom-checker', component: CustumLinkCheckComponent },
+      { path: 'pricing', component: PricingComponent }
     ],
   },
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '404' },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

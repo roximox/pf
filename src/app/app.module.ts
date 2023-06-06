@@ -30,10 +30,19 @@ import {JwtInterceptor} from "./controler/interceptors/jwt.interceptor";
 import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.component';
 import { WithoutSidebarComponent } from './view/pages/without-sidebar/without-sidebar.component';
 import { DashnavbarComponent } from './view/dashnavbar/dashnavbar.component';
-
+import { NotFoundComponent } from './view/not-found/not-found.component';
+import {HomeComponent} from "./view/dashboard/charts/home/home.component";
+import { BarChartComponent } from './view/dashboard/charts/bar-chart/bar-chart.component';
+import { LinksCardsComponent } from './view/dashboard/charts/links-cards/links-cards.component';
+import { CercleChartProduitComponent } from './view/dashboard/charts/cercle-chart-produit/cercle-chart-produit.component';
+import { CercleChartLinksComponent } from './view/dashboard/charts/cercle-chart-links/cercle-chart-links.component';
+import { ButtonsComponent } from './view/dashboard/charts/buttons/buttons.component';
+import {ChartModule} from "primeng/chart";
+import { LineChartComponent } from './view/dashboard/charts/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
+    HomeComponent,
     AppComponent,
     SideMenuComponent,
     LoadPageComponent,
@@ -57,6 +66,13 @@ import { DashnavbarComponent } from './view/dashnavbar/dashnavbar.component';
     WithSidebarComponent,
     WithoutSidebarComponent,
     DashnavbarComponent,
+    NotFoundComponent,
+    BarChartComponent,
+    LinksCardsComponent,
+    CercleChartProduitComponent,
+    CercleChartLinksComponent,
+    ButtonsComponent,
+    LineChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +80,8 @@ import { DashnavbarComponent } from './view/dashnavbar/dashnavbar.component';
     RouterOutlet,
     RouterLink,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

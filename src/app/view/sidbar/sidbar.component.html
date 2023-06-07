@@ -6,7 +6,7 @@
   <nav>
     <ul>
       <li>
-        <a routerLinkActive="active" routerLink="/sites">
+        <a routerLinkActive="active" routerLink="/dashboard/sites">
           <img src="../../../assets/icons_sidebar/Vector-2.svg" alt="" />
           <span>Sites</span>
         </a>
@@ -20,7 +20,7 @@
         <a
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          routerLink="/dashboard"
+          routerLink="/dashboard/home"
         >
           <img src="../../../assets/icons_sidebar/Vector.svg" alt="" />
           <span>Dashboard</span>
@@ -47,7 +47,7 @@
         </ul>
       </li>
       <li>
-        <a routerLinkActive="active" routerLink="/link-web">
+        <a routerLinkActive="active" routerLink="/dashboard/home">
           <img src="../../../assets/icons_sidebar/Vector-3.svg" alt="" />
           <span>Sites Monitoring</span>
         </a>
@@ -59,9 +59,9 @@
         </a>
       </li>
       <li>
-        <a routerLinkActive="active" [routerLink]="baseUrl + '/clients'">
-          <img src="../../../assets/icons_sidebar/Vector-5.svg" alt="" /><span
-            >Custom link checker</span
+        <!--<a routerLinkActive="active" [routerLink]="baseUrl + '/clients'">-->
+        <a routerLinkActive="active" routerLink="/dashboard/custom">
+          <img src="../../../assets/icons_sidebar/Vector-5.svg" alt="" /><span>Custom link checker</span
           >
         </a>
       </li>
@@ -71,19 +71,19 @@
 
     <ul>
       <li>
-        <a routerLinkActive="active" [routerLink]="baseUrl + '/files'">
+        <a routerLinkActive="active" routerLink="/dashboard/guides">
           <img src="../../../assets/icons_sidebar/Vector-7.svg" alt="" />
           <span>Watch Our guides</span>
         </a>
       </li>
       <li>
-        <a routerLinkActive="active" [routerLink]="baseUrl + '/history'">
+        <a routerLinkActive="active" routerLink="/dashboard/pricing">
           <img src="../../../assets/icons_sidebar/Vector-6.svg" alt="" />
           <span>Pricing</span>
         </a>
       </li>
       <li>
-        <a routerLinkActive="active" [routerLink]="baseUrl + '/setting'">
+        <a routerLinkActive="active" routerLink="/contact-us">
           <img src="../../../assets/icons_sidebar/Vector-8.svg" alt="" />
           <span>Get Help</span>
         </a>

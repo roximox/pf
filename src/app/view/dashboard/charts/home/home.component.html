@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container">
+  <div class="row">
+    <app-links-cards></app-links-cards>
+  </div>
+  <div class="row alignemet">
+    <div class="col-lg-7">
+      <span class="titres">Site health score</span>
+      <app-bar-chart></app-bar-chart>
+    </div>
+    <div class="col-lg-5">
+      <span class="titres">totale products</span>
+      <app-cercle-chart-produit></app-cercle-chart-produit>
+    </div>
+  </div>
+  <div class="row alignemet">
+    <div class="col-lg-6">
+      <span class="titres">Totale page</span>
+      <app-line-chart></app-line-chart>
+    </div>
+    <div class="col-lg-6">
+      <span class="titres">totale products</span>
+      <app-cercle-chart-links></app-cercle-chart-links>
+      <div class="row">
+        <div class="col-6" style="display: flex">
+          <button class="recheck" href="#" style="margin-right:10px;"><img src="assets/recheck.svg"> </button>
+          <button class="download" href="#"><img src="assets/download.svg"> </button>
+        </div>
+        <div class="col-6 upgrade">
+          <div class="upgrade-texte" >Improve Managment by upgrading your account</div>
+          <button class="upgrade-button">Upgrade</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

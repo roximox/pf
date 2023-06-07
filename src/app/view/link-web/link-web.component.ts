@@ -15,7 +15,7 @@ export class LinkWebComponent implements OnInit {
   constructor(
     private webSiteService: WebSiteService,
     private webScraperService: WebScraperService,
-    private route: Router,
+    private route: Router
   ) {}
   ngOnInit(): void {}
 
@@ -30,16 +30,8 @@ export class LinkWebComponent implements OnInit {
     return website;
   }
 
-  // Get Amazon Products
-  public async fetchAmazonProducts(id: number): Promise<Array<Result>> {
-    const products = await lastValueFrom(
-      this.webScraperService.AmazonProducts(id)
-    );
-    return products;
-  }
-
   // Main Function
-  async ScrapingData() {
+  async getWebsite() {
     // Final Url
     const url = new URL(this.savedWebsite.url);
 
@@ -50,11 +42,8 @@ export class LinkWebComponent implements OnInit {
     );
 
     console.log('Website loaded success');
-
-    // Fetch Amazon Products
-    this.results = await this.fetchAmazonProducts(this.loadedWebsite.id);
-    
-    this.route.navigate(["load"]);
+    console.log("Heloooo")
+    this.route.navigate(['load']);
   }
 
   // Getters && Setters
@@ -71,14 +60,5 @@ export class LinkWebComponent implements OnInit {
   }
   public set savedWebsite(value: Website) {
     this.webSiteService.savedWebsite = value;
-  }
-
-  // WebScraperService
-  get results(): Array<Result> {
-    return this.webScraperService.results;
-  }
-
-  set results(value: Array<Result>) {
-    this.webScraperService.results = value;
   }
 }

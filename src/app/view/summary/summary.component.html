@@ -4,10 +4,7 @@
     <div class="repot-compelet-box">
       <div class="wrapper">
         <div class="repot-compelet box">
-          <div class="repot-compelet-text">
-            <img src="../../../assets/summary/check.svg" alt="" />
-            <span>Report completed</span>
-          </div>
+          <div class="repot-compelet-text">Report completed</div>
           <div class="report-text">
             Please subscribe to Slinker to get access to full features and find
             broken links on your site
@@ -15,121 +12,112 @@
           <i class="fa fa-ellipsis-h"></i>
         </div>
 
-        <div class="right-side">
-          <div class="button-wrapper">
-            <div>
-              <a href="#">
-                <button class="recheck-button">
-                  <img width="15" src="/assets/recheck.svg" alt="" srcset="" />
-                  <p style="margin-top: 1rem !important">Recheck</p>
-                </button>
-              </a>
-            </div>
-
-            <div>
-              <a href="#">
-                <button class="download-button">
-                  <img width="15" src="/assets/download.svg" alt="" srcset="" />
-                  <p style="margin-top: 1rem !important">Download</p>
-                </button>
-              </a>
-            </div>
+        <div class="button-wrapper">
+          <div>
+            <a href="#">
+              <button class="recheck-button">
+                <img width="15" src="/assets/recheck.svg" alt="" srcset="" />
+                <p style="margin-top: 1rem !important">Recheck</p>
+              </button>
+            </a>
           </div>
 
-          <div class="upgrade-rectangle box">
-            <div class="upgrade-paragraphe">
-              Improve Managment by upgrading your account
-            </div>
-            <button routerLink="../pricing" class="upgrade-button">
-              Upgrade
-            </button>
+          <div>
+            <a href="#">
+              <button class="download-button">
+                <img width="15" src="/assets/download.svg" alt="" srcset="" />
+                <p style="margin-top: 1rem !important">Download</p>
+              </button>
+            </a>
           </div>
+        </div>
+
+        <div class="upgrade-rectangle box">
+          <div class="upgrade-paragraphe">
+            Improve Managment by upgrading your account
+          </div>
+          <button routerLink="../pricing" class="upgrade-button">
+            Upgrade
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="products">
-      <div class="amazon-products-titre">Amazon products</div>
+    <div class="amazon-products-titre">Amazon products</div>
 
-      <div class="table">
-        <div class="space-between">
-          <span class="purple">statues:</span>
-          <span class="active">All</span>
-          <span>Available</span>
-          <span>Unavailable</span>
-          <span>404</span>
-          <div class="input">
-            <span class="purple">Affiliate Id</span>
-            <select class="boxSizing">
-              <option>All</option>
-              <option>Available</option>
-              <option>Unavailable</option>
-              <option>404</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="table-container-h">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Procduct name</th>
-                <th>Product staut</th>
-                <th>Reviews</th>
-                <th>Affiliate Id</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img src="assets/produit.png" class="image1" />
-                </td>
-                <td>
-                  Nair Hair Remover for Men Hair Remover Body Cream, 13 oz
-                </td>
-                <td class="green">
-                  <span>AVAILABLE</span>
-                </td>
-                <td>3.7 (42 reviews)</td>
-                <td class="blue">
-                  <div class="affiliate-text1"><span>ge2kliam22</span></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="assets/produit.png" class="image1" />
-                </td>
-                <td>
-                  Nair Hair Remover for Men Hair Remover Body Cream, 13 oz
-                </td>
-                <td class="red">
-                  <span>UNAVAILABLE</span>
-                </td>
-                <td>3.7 (42 reviews)</td>
-                <td class="blue">
-                  <span>ge2kliam22</span>
-                </td>
-              </tr>0
-              <tr>
-                <td>
-                  <img src="assets/produit.png" class="image1" />
-                </td>
-                <td>
-                  Nair Hair Remover for Men Hair Remover Body Cream, 13 oz
-                </td>
-                <td class="gray">
-                  <span>PAGE 404</span>
-                </td>
-                <td>3.7 (42 reviews)</td>
-                <td class="blue">
-                  <span>ge2kliam22</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <div class="space-between">
+      <span class="purple">statues:</span>
+      <span class="active">All</span>
+      <span>Available</span>
+      <span>Unavailable</span>
+      <span>404</span>
+      <div class="input">
+        <span class="purple">Affiliate Id</span>
+        <select class="boxSizing">
+          <option>All</option>
+          <option>Available</option>
+          <option>Unavailable</option>
+          <option>404</option>
+        </select>
       </div>
+    </div>
+
+    <div class="table-container-h">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Procduct name</th>
+            <th>Product staut</th>
+            <th>Reviews</th>
+            <th>Affiliate Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let result of results_view">
+            <td>
+              <img [src]="result.image" class="image1" />
+            </td>
+            <td>{{ result.description }}</td>
+            <td class="green" *ngIf="result.stock === 'In Stock'">
+              <span>AVAILABLE</span>
+            </td>
+            <td class="red" *ngIf="result.stock.toLowerCase().includes('unavailable')">
+              <span>UNAVAILABLE</span>
+            </td>
+
+            <td
+              class="gray"
+              *ngIf="
+                result.stock !== 'In Stock' &&
+                !result.stock.includes('unavailable')
+              "
+            >
+              <span>Page 404</span>
+            </td>
+            <td>{{ result.review }}</td>
+            <td class="blue">
+              <div class="affiliate-text1"><span>ge2kliam22</span></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="assets/produit.png" class="image1" />
+            </td>
+            <td>Nair Hair Remover for Men Hair Remover Body Cream, 13 oz</td>
+            <td class="red">
+              <span>UNAVAILABLE</span>
+            </td>
+            <td>3.7 (42 reviews)</td>
+            <td class="blue">
+              <span>ge2kliam22</span>
+            </td>
+            <div class="blur_div"><button>Upgrade</button></div>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="statistics">

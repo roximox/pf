@@ -1,40 +1,112 @@
-.page {
-  display: flex;
-  background-color: #e5e5e5 !important;
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BlackItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-MediumItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-BoldItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-BookItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-Book.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Book.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-Black.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-Bold.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
+:root {
+  --main-bg-color: #503e9d;
+  --font-primary: Circular Std;
+}
+
+.page {
+  display: flex;
+  background: hsl(0 0% 95% / 1);
+}
 .page .contenu {
   flex-grow: 1;
+  padding-inline: 20px;
 }
 
 .contenu {
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 0;
+}
+
+.box {
+  box-shadow: 0 0 10px #bfbfbffc;
+  border-radius: 10px;
 }
 
 .summuray-titre {
   margin-top: 20px;
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.wrapper {
+.repot-compelet-box {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  gap: 50px;
+  flex-wrap: wrap;
 }
-
-.box {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  flex: 1;
-  background-color: white;
+.repot-compelet-box > * {
+  flex-grow: 1;
 }
-
 .repot-compelet-box .repot-compelet {
+  flex-basis: 80%;
   position: relative;
-  padding: 15px;
+  padding: 10px 10px 10px 20px;
+}
+.repot-compelet-box {
+  flex-basis: 80%;
+  min-width: 200px;
 }
 
 .repot-compelet i {
@@ -44,108 +116,8 @@
 }
 
 .repot-compelet-text {
-  display: flex;
-  gap: 10px;
   font-size: 25px;
   color: #31ba86;
-  margin-bottom: 10px;
-}
-
-.wrapper .right-side {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.button-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 1.5rem;
-}
-
-.button-wrapper .recheck-button,
-.button-wrapper .download-button {
-  border: none;
-  border-radius: 0.5rem;
-  padding: 10px 15px 0px;
-}
-
-.button-wrapper .recheck-button {
-  background-color: #31ba86;
-  color: white;
-}
-
-.button-wrapper .download-button {
-  background-color: white;
-  color: #31ba86;
-}
-
-.upgrade-rectangle {
-  text-align: center;
-  padding: 10px 10px;
-  background: #503e9d;
-  color: #fff;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.upgrade-paragraphe {
-  font-size: 0.8rem;
-}
-
-.upgrade-rectangle button {
-  color: #503e9d;
-  background: #fff;
-  padding: 5px 20px;
-  border: none;
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 576px) {
-  .button-wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-  }
-
-  .upgrade-rectangle {
-    display: none;
-    flex-basis: 100%;
-  }
-  .download-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    font-size: smaller;
-  }
-  .recheck-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    font-size: smaller;
-  }
-  li {
-    text-decoration: none;
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .repot-compelet {
-    font-size: smaller;
-  }
 }
 
 .buttons img {
@@ -157,29 +129,39 @@
     text-align: center;
     display: flex;
   }
+
+  .page .contenu {
+    padding-inline: 0;
+    padding-bottom: 100px;
+  }
+  
 }
 
-/* Products */
-.products {
-  background-color: white;
-  box-shadow: 0px 15px 30px rgba(87, 105, 177, 0.06);
-  border-radius: 10px;
-  margin-top: 25px;
-  padding: 1px;
+.upgrade-rectangle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background: #503e9d;
+  color: #fff;
 }
 
-.products .amazon-products-titre {
-  font-size: 1.3rem;
+.upgrade-button {
+  background: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
 }
 
-.products .table {
-  padding: 20px;
+.amazon-products-titre {
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 .space-between {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   font-weight: 500;
   font-size: 20px;
   padding-block: 10px;
@@ -195,15 +177,6 @@
 
 .space-between span.purple {
   color: #503e9d;
-}
-
-.space-between .input {
-  width: 40%;
-}
-
-.space-between .input .boxSizing {
-  width: 60%;
-  border-radius: 4px;
 }
 
 .input span {
@@ -241,8 +214,38 @@ table tr td.gray span {
 table tr td.green span {
   background: green;
 }
+
 table tr td.blue span {
   background: darkblue;
+}
+
+/* blur div */
+table tr {
+position: relative;
+}
+
+table tr .blur_div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-inline: 10px;
+  background-color: hsla(0, 2%, 92%, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+table tr .blur_div button {
+  background-color: white;
+  color: rgba(80, 62, 157, 1);
+  box-shadow: 0px 4px 20px rgba(87, 105, 177, 0.1);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  line-height: 25px;
+  font-weight: 500;
 }
 
 .statistics,
@@ -301,4 +304,85 @@ table.links tr td:last-child {
 table.links tr td i {
   font-size: 10px;
   color: #34a853;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.upgrade-rectangle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-wrapper {
+  flex-basis: 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 576px) {
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .upgrade-rectangle {
+    display: none;
+    flex-basis: 100%;
+  }
+  .download-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: smaller;
+  }
+  .recheck-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: smaller;
+  }
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .repot-compelet {
+    font-size: smaller;
+  }
+}
+
+.recheck-button {
+  flex-basis: 25%;
+  background-color: #31ba86;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.download-button {
+  flex-basis: 25%;
+  background-color: white;
+  color: #31ba86;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }

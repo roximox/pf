@@ -12,7 +12,8 @@ export class WebSiteService {
   // BaseUrl = "http://localhost:8036/api"
   readonly API = `${env.BaseUrl}/admin/webSite`;
   private _loadedWebsite: Website;
-  private _savedWebsite : Website;
+  private _loadedWebsites: Array<Website>;
+  private _savedWebsite: Website;
 
   constructor(private http: HttpClient) {}
 
@@ -31,6 +32,11 @@ export class WebSiteService {
     return this.http.post<number>(`${this.API}/`, null);
   }
 
+  // Get All Website
+  public getAll(): Observable<Array<Website>> {
+    return this.http.get<Array<Website>>(`${this.API}/getAll`);
+  }
+
   // Getters && Setters
   public get loadedWebsite(): Website {
     if (this._loadedWebsite == null) this._loadedWebsite = new Website();
@@ -38,6 +44,15 @@ export class WebSiteService {
   }
   public set loadedWebsite(value: Website) {
     this._loadedWebsite = value;
+  }
+
+  public get loadedWebsites(): Array<Website> {
+    if (this._loadedWebsites == null)
+      this._loadedWebsites = new Array<Website>();
+    return this._loadedWebsites;
+  }
+  public set loadedWebsites(value: Array<Website>) {
+    this._loadedWebsites = value;
   }
 
   public get savedWebsite(): Website {

@@ -2,28 +2,27 @@
   <div class="contenu">
     <h1 class="site-titre">Sites</h1>
     <a href="#" class="add-sites">Add site +</a>
-    <table class="premier-rectangle">
+    <table class="premier-rectangle" *ngFor="let site of loadedWebsites">
       <tr>
-        <th>NOM DE SITE : </th>
-        <td class="eysi1">eysi.net</td>
+        <th>NOM DE SITE :</th>
+        <td class="eysi1">{{ site.url }}</td>
       </tr>
       <tr class="ligne-tableau"></tr>
       <tr>
-        <th >Link Checked</th>
-        <th >Available</th>
-        <th >Unavailable</th>
-        <th >Error 404</th>
+        <th>Link Checked</th>
+        <th>Available</th>
+        <th>Unavailable</th>
+        <th>Error 404</th>
         <th>Affiliate id</th>
       </tr>
       <tr>
-        <td class="nbr1">112</td>
-        <td class="nbr2">86</td>
-        <td class="nbr3">12</td>
-        <td class="nbr4">14</td>
+        <td class="nbr1">{{ site.linkChecked }}</td>
+        <td class="nbr2">{{ site.unavailable }}</td>
+        <td class="nbr3">{{ site.available }}</td>
+        <td class="nbr4">{{ site.linkChecked - site.linkProccessed }}</td>
         <td class="nbr5">2</td>
         <td class="nbr5"><button class="btn-seemore">See more</button></td>
       </tr>
     </table>
   </div>
-
 </div>

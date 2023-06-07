@@ -23,6 +23,9 @@ export class SummaryComponent implements OnInit {
     } else {
       this.results_view = this.results;
     }
+    console.log(this.results);
+
+    console.log(JSON.parse(localStorage.getItem("products")));
   }
 
   // Getters & Setters

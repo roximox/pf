@@ -28,7 +28,7 @@ export class LoadPageComponent implements OnInit {
     );
 
     console.log('Results is loaded success');
-    this.route.navigate(['dashboard/summary']);
+    this.route.navigate(['/dashboard/summary']);
   }
 
   // Get Amazon Products

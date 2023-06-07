@@ -75,28 +75,54 @@
         </thead>
 
         <tbody>
-          <tr *ngFor="let result of results">
+          <tr *ngFor="let result of p">
             <td>
-              <img [src]="result.image" class="image1" />
+              <img
+                [src]="result.image"
+                class="image1"
+                *ngIf="
+                  result.image.endsWith('.jpg') ||
+                  result.image.endsWith('.png') ||
+                  result.image.endsWith('.jepg')
+                "
+              />
+              <img
+                src="assets/Image_not_available.png"
+                class="image1"
+                *ngIf="
+                  !result.image.endsWith('.jpg') &&
+                  !result.image.endsWith('.png') &&
+                  !result.image.endsWith('.jepg')
+                "
+              />
             </td>
-            <td>{{ result.description }}</td>
-            <td class="green" *ngIf="result.stock === 'In Stock'">
+            <td>
+              {{
+                result.description.length < 40
+                  ? result.description
+                  : result.description.slice(0, 40) + "..."
+              }}
+            </td>
+            <td
+              class="green"
+              *ngIf="result.stock.toLowerCase().includes('in stock')"
+            >
               <span>AVAILABLE</span>
             </td>
-            <td class="red" *ngIf="result.stock.toLowerCase().includes('unavailable')">
+            <td
+              class="red"
+              *ngIf="
+                result.stock.toLowerCase().includes('unavailable') ||
+                result.stock === ''
+              "
+            >
               <span>UNAVAILABLE</span>
             </td>
 
-            <td
-              class="gray"
-              *ngIf="
-                result.stock !== 'In Stock' &&
-                !result.stock.includes('unavailable')
-              "
-            >
+            <!-- <td class="gray" *ngIf="result.stock === ''">
               <span>Page 404</span>
-            </td>
-            <td>{{ result.review }}</td>
+            </td> -->
+            <td>{{ result.review.slice(0, 3) }} out 5 stars</td>
             <td class="blue">
               <div class="affiliate-text1"><span>ge2kliam22</span></div>
             </td>

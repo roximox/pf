@@ -663,3 +663,8 @@ details p {
   text-align: center;
   color: #000000;
 }
+
+.switch {
+  background-color: transparent;
+  margin-inline: 10px;
+}

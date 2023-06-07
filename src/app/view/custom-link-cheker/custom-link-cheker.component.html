@@ -1,17 +1,324 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<div class="page">
   <div class="contenu">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-4 col-12">
-        <!-- Error Inner -->
-        <div >
-          <h1><span style=" padding-top:20px">Custom Link checker</span></h1>
-          <p></p>
-          <form class="search-form">
-            <input placeholder="eysi.net" type="text" style="width: 300px; height: 50px ">
-            <button class="btn-secondary " type="submit" style="width: 100px; height: 50px; background-color: #3f51b5"><i class="fa fa-search "></i></button>
-          </form>
+    <h2 class="summuray-titre">Custom Link checker</h2>
+    <div class="repot-compelet-box">
+      <div class="wrapper">
+        <div class="repot-compelet box">
+          <div class="repot-compelet-text">Report completed</div>
+          <div class="report-text">
+            Please subscribe to Slinker to get access to full features and find
+            broken links on your site
+          </div>
+          <i class="fa fa-ellipsis-h"></i>
         </div>
-        <!--/ End Error Inner -->
+
+        <div class="button-wrapper">
+          <div>
+            <a href="#">
+              <button class="recheck-button">
+                <img width="15" src="/assets/recheck.svg" alt="" srcset="" />
+                <p style="margin-top: 1rem !important">Recheck</p>
+              </button>
+            </a>
+          </div>
+
+          <div>
+            <a href="#">
+              <button class="download-button">
+                <img width="15" src="/assets/download.svg" alt="" srcset="" />
+                <p style="margin-top: 1rem !important">Download</p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="upgrade-rectangle box">
+          <div class="upgrade-paragraphe">
+            Improve Managment by upgrading your account
+          </div>
+          <button routerLink="../pricing" class="upgrade-button">
+            Upgrade
+          </button>
+        </div>
       </div>
     </div>
+
+    <div class="my-4">
+      <!-- Error Inner -->
+      <form class="search-form">
+        <input
+          placeholder="eysi.net"
+          type="text"
+          style="width: 300px; height: 50px"
+        />
+        <button
+          class="btn-secondary"
+          type="submit"
+          style="width: 100px; height: 50px; background-color: #3f51b5"
+        >
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+
+      <!--/ End Error Inner -->
+    </div>
+
+    <div class="amazon-products-titre">Amazon products</div>
+
+    <div class="space-between">
+      <span class="purple">statues:</span>
+      <span class="active">All</span>
+      <span>Available</span>
+      <span>Unavailable</span>
+      <span>404</span>
+      <div class="input">
+        <span class="purple">Affiliate Id</span>
+        <select class="boxSizing">
+          <option>All</option>
+          <option>Available</option>
+          <option>Unavailable</option>
+          <option>404</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-container-h">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Procduct name</th>
+            <th>Product staut</th>
+            <th>Reviews</th>
+            <th>Affiliate Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let result of p">
+            <td>
+              <img
+                [src]="result.image"
+                class="image1"
+                *ngIf="
+                  result.image.endsWith('.jpg') ||
+                  result.image.endsWith('.png') ||
+                  result.image.endsWith('.jepg')
+                "
+              />
+              <img
+                src="assets/Image_not_available.png"
+                class="image1"
+                *ngIf="
+                  !result.image.endsWith('.jpg') &&
+                  !result.image.endsWith('.png') &&
+                  !result.image.endsWith('.jepg')
+                "
+              />
+            </td>
+            <td>
+              {{
+                result.description.length < 40
+                  ? result.description
+                  : result.description.slice(0, 40) + "..."
+              }}
+            </td>
+            <td
+              class="green"
+              *ngIf="result.stock.toLowerCase().includes('in stock')"
+            >
+              <span>AVAILABLE</span>
+            </td>
+            <td
+              class="red"
+              *ngIf="
+                result.stock.toLowerCase().includes('unavailable') ||
+                result.stock === ''
+              "
+            >
+              <span>UNAVAILABLE</span>
+            </td>
+
+            <!-- <td class="gray" *ngIf="result.stock === ''">
+                <span>Page 404</span>
+              </td> -->
+            <td>{{ result.review.slice(0, 3) }} out 5 stars</td>
+            <td class="blue">
+              <div class="affiliate-text1"><span>ge2kliam22</span></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="assets/produit.png" class="image1" />
+            </td>
+            <td>Nair Hair Remover for Men Hair Remover Body Cream, 13 oz</td>
+            <td class="red">
+              <span>UNAVAILABLE</span>
+            </td>
+            <td>3.7 (42 reviews)</td>
+            <td class="blue">
+              <span>ge2kliam22</span>
+            </td>
+            <div class="blur_div"><button>Upgrade</button></div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="statistics">
+      <div>
+        <h4 class="title">site metrices</h4>
+        <div>
+          <div class="box">
+            <img src="assets/contacti.png" alt="" />
+            <span class="number">1</span>
+            <span class="text">ID Checked</span>
+          </div>
+          <div class="box">
+            <img src="assets/page-processed.jpg" alt="" />
+            <span class="number">250</span>
+            <span class="text">Pages Processed</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 class="title">crawl details</h4>
+        <div>
+          <div class="box">
+            <img src="assets/page-Checked.png" alt="" />
+            <span class="number">03/20</span>
+            <span class="text">Crawling Date Started</span>
+          </div>
+          <div class="box">
+            <img src="assets/reload12.png" alt="" />
+            <span class="number">3 min</span>
+            <span class="text">Time Elapsed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="summuray-titre">Page List</h2>
+    <div class="links-table-container">
+      <table class="links">
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+        <tr>
+          <td>https://eysi.net</td>
+          <td><i class="fa fa-circle"></i> ready</td>
+        </tr>
+      </table>
+    </div>
   </div>
+</div>
+
+<br />
+<br />
+<app-footer-nav></app-footer-nav>

@@ -39,6 +39,7 @@ import { CercleChartLinksComponent } from './view/dashboard/charts/cercle-chart-
 import { ButtonsComponent } from './view/dashboard/charts/buttons/buttons.component';
 import {ChartModule} from "primeng/chart";
 import { LineChartComponent } from './view/dashboard/charts/line-chart/line-chart.component';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { LineChartComponent } from './view/dashboard/charts/line-chart/line-char
     RouterLink,
     FormsModule,
     HttpClientModule,
-    ChartModule
+    ChartModule,
+    InputSwitchModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

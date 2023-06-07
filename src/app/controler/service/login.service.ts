@@ -26,6 +26,11 @@ export class LoginService {
       jwtRequest
     );
   }
+
+  public logout() {
+    localStorage.setItem('autenticated', JSON.stringify(false));
+    localStorage.removeItem('token');
+  }
 }
 /*
   private _login!:Login;

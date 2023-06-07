@@ -3,6 +3,7 @@ import { Route, Router } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { Result } from 'src/app/controler/model/result.model';
 import { Website } from 'src/app/controler/model/website.model';
+import { LoginService } from 'src/app/controler/service/login.service';
 import { WebScraperService } from 'src/app/controler/service/web-scraper.service';
 import { WebSiteService } from 'src/app/controler/service/web-site.service';
 
@@ -15,6 +16,7 @@ export class LinkWebComponent implements OnInit {
   constructor(
     private webSiteService: WebSiteService,
     private webScraperService: WebScraperService,
+    private loginService: LoginService,
     private route: Router
   ) {}
   ngOnInit(): void {}
@@ -42,8 +44,14 @@ export class LinkWebComponent implements OnInit {
     );
 
     console.log('Website loaded success');
-    console.log("Heloooo")
+    console.log('Heloooo');
     this.route.navigate(['load']);
+  }
+
+  // Logout user
+  public logout() {
+    this.loginService.logout();
+    this.route.navigate(["/login"])
   }
 
   // Getters && Setters

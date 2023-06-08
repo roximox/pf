@@ -12,7 +12,8 @@ import { WebSiteService } from 'src/app/controler/service/web-site.service';
 export class IssuesComponent {
   similar = new Array<Result>();
   products = new Array<Result>();
-  p = JSON.parse(localStorage.getItem('products'));
+  results_view = new Array<Result>();
+  storageProdacte = JSON.parse(localStorage.getItem('products'));
 
   constructor(
     private webSiteService: WebSiteService,
@@ -21,19 +22,19 @@ export class IssuesComponent {
   ) {}
 
   async ngOnInit() {
-    this.results = this.p
-    if (this.results.length > 4) {
-      this.products = this.results.slice(0, this.results.length / 2);
-      this.similar = this.results.slice(
-        this.results.length / 2,
-        this.results.length
+    this.results_view =
+      this.results.length === 0 ? this.storageProdacte : this.results;
+    console.log(this.results_view);
+    if (this.results_view.length > 4) {
+      this.products = this.results_view.slice(0, this.results_view.length * 0.5);
+      console.log(this.products);
+      this.similar = this.results_view.slice(
+        this.results_view.length / 2,
+        this.results_view.length
       );
     } else {
-      this.products = this.results;
+      this.products = this.results_view;
     }
-    console.log(this.results);
-
-    console.log(this.p);
   }
 
   // Getters & Setters

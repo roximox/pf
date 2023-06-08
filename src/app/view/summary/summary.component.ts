@@ -11,7 +11,9 @@ import { WebSiteService } from 'src/app/controler/service/web-site.service';
 })
 export class SummaryComponent implements OnInit {
   results_view = new Array<Result>();
-  p = JSON.parse(localStorage.getItem('products'));
+  storageProdacte = JSON.parse(localStorage.getItem('products'));
+
+  
 
   constructor(
     private webSiteService: WebSiteService,
@@ -20,15 +22,9 @@ export class SummaryComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    if (this.results.length > 4) {
-      this.results_view = this.results.slice(0, 4);
-      
-    } else {
-      this.results_view = this.results;
-    }
     console.log(this.results);
-
-    console.log(this.p);
+    this.results_view = this.results.length === 0 ? this.storageProdacte  : this.results
+    console.log(this.storageProdacte);
   }
 
   // Getters & Setters

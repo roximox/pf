@@ -40,6 +40,7 @@ import { ButtonsComponent } from './view/dashboard/charts/buttons/buttons.compon
 import {ChartModule} from "primeng/chart";
 import { LineChartComponent } from './view/dashboard/charts/line-chart/line-chart.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { NewWebSiteComponent } from './view/new-web-site/new-web-site.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { InputSwitchModule } from 'primeng/inputswitch';
     CercleChartLinksComponent,
     ButtonsComponent,
     LineChartComponent,
+    NewWebSiteComponent,
   ],
   imports: [
     BrowserModule,

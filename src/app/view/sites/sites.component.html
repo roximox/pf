@@ -2,7 +2,7 @@
   <div class="contenu">
     <div class="top">
       <h1 class="site-titre">Sites</h1>
-      <a href="#" class="add-sites">Add site +</a>
+      <a routerLink="/dashboard/new-website" class="add-sites">Add site +</a>
     </div>
     <table class="premier-rectangle" *ngFor="let site of loadedWebsites">
       <tr>
@@ -19,9 +19,15 @@
       </tr>
       <tr>
         <td class="nbr1">{{ site.linkChecked }}</td>
-        <td class="nbr2">{{ site.unvaibale }}</td>
-        <td class="nbr3">{{ site.avaibale }}</td>
-        <td class="nbr4">{{ site.linkChecked - site.linkProcessed }}</td>
+        <td class="nbr2">{{ site.avaibale }}</td>
+        <td class="nbr3">{{ site.unvaibale }}</td>
+        <td class="nbr4">
+          {{
+            site.linkProcessed - site.linkChecked > 0
+              ? site.linkProcessed - site.linkChecked
+              : 0
+          }}
+        </td>
         <td class="nbr5">2</td>
         <td class="nbr5"><button class="btn-seemore">See more</button></td>
       </tr>

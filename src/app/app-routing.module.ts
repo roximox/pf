@@ -20,6 +20,7 @@ import { WithSidebarComponent } from './view/pages/with-sidebar/with-sidebar.com
 import { AuthGuard } from './controler/auth/auth.guard';
 import {NotFoundComponent} from "./view/not-found/not-found.component";
 import {CustumLinkCheckComponent} from "./view/custum-link-check/custum-link-check.component";
+import { NewWebSiteComponent } from './view/new-web-site/new-web-site.component';
 
 const routes: Routes = [
   {
@@ -50,7 +51,8 @@ const routes: Routes = [
       { path: 'custom', component: CustomLinkChekerComponent },
       { path: 'home', component: HomeComponent },
       { path: 'custom-checker', component: CustumLinkCheckComponent },
-      { path: 'pricing', component: PricingComponent }
+      { path: 'pricing', component: PricingComponent },
+      { path: 'new-website', component: NewWebSiteComponent },
     ],
   },
   { path: '404', component: NotFoundComponent },

@@ -1,10 +1,9 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { lastValueFrom } from 'rxjs';
 import { Result } from 'src/app/controler/model/result.model';
 import { WebScraperService } from 'src/app/controler/service/web-scraper.service';
 import { WebSiteService } from 'src/app/controler/service/web-site.service';
-import html2canvas from "html2canvas";
-import jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-summary',
@@ -14,8 +13,7 @@ import jsPDF from 'jspdf';
 export class SummaryComponent implements OnInit {
   results_view = new Array<Result>();
   storageProdacte = JSON.parse(localStorage.getItem('products'));
-
-
+  allWebsiteUrl: Array<string>;
 
   constructor(
     private webSiteService: WebSiteService,
@@ -25,8 +23,21 @@ export class SummaryComponent implements OnInit {
 
   async ngOnInit() {
     console.log(this.results);
-    this.results_view = this.results.length === 0 ? this.storageProdacte  : this.results
+    this.results_view =
+      this.results.length === 0 ? this.storageProdacte : this.results;
     console.log(this.storageProdacte);
+
+    this.allWebsiteUrl = await this.getAllUrl();
+
+    console.log('first');
+    console.log(this.allWebsiteUrl);
+  }
+
+  async getAllUrl(): Promise<Array<string>> {
+    const urls: Array<string> = await lastValueFrom(
+      this.webScraperService.scrapeLinksWebsite(1)
+    );
+    return urls;
   }
 
   // Getters & Setters
@@ -37,22 +48,5 @@ export class SummaryComponent implements OnInit {
 
   set results(value: Array<Result>) {
     this.webScraperService.results = value;
-  }
-  title = 'htmltopdf';
-  @ViewChild('pdfTable', {static: false})
-  pdfTable!: ElementRef;
-
-  public downloadAsPDF() {
-    const pdfTable = this.pdfTable.nativeElement;
-
-    html2canvas(pdfTable).then(canvas => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF();
-      const imgProps = pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth()*1.3;
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width*1.1;
-      pdf.addImage(imgData, 'PNG', -30, 0, pdfWidth, pdfHeight);
-      pdf.save('facture.pdf');
-    });
   }
 }

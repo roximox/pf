@@ -12,6 +12,8 @@ export class SitesComponent implements OnInit {
   ngOnInit(): void {
     this.websiteService.getAll().subscribe(
       (data) => {
+        console.log("data");
+        console.log(data);
         data.map((site) => {
           const url = new URL(site.url);
           site.url = url.hostname;

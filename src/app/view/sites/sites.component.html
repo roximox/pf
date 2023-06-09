@@ -1,7 +1,9 @@
 <div class="page">
   <div class="contenu">
-    <h1 class="site-titre">Sites</h1>
-    <a href="#" class="add-sites">Add site +</a>
+    <div class="top">
+      <h1 class="site-titre">Sites</h1>
+      <a href="#" class="add-sites">Add site +</a>
+    </div>
     <table class="premier-rectangle" *ngFor="let site of loadedWebsites">
       <tr>
         <th>NOM DE SITE :</th>
@@ -17,9 +19,9 @@
       </tr>
       <tr>
         <td class="nbr1">{{ site.linkChecked }}</td>
-        <td class="nbr2">{{ site.unavailable }}</td>
-        <td class="nbr3">{{ site.available }}</td>
-        <td class="nbr4">{{ site.linkChecked - site.linkProccessed }}</td>
+        <td class="nbr2">{{ site.unvaibale }}</td>
+        <td class="nbr3">{{ site.avaibale }}</td>
+        <td class="nbr4">{{ site.linkChecked - site.linkProcessed }}</td>
         <td class="nbr5">2</td>
         <td class="nbr5"><button class="btn-seemore">See more</button></td>
       </tr>

@@ -36,6 +36,7 @@ const routes: Routes = [
       { path: 'link-web', component: LinkWebComponent },
       { path: 'load', component: LoadPageComponent },
       { path: 'contact-us', component: ContactUsComponent },
+      { path: 'facture', component: HomeClientComponent }
     ],
   },
   {
@@ -50,7 +51,8 @@ const routes: Routes = [
       { path: 'custom', component: CustomLinkChekerComponent },
       { path: 'home', component: HomeComponent },
       { path: 'custom-checker', component: CustumLinkCheckComponent },
-      { path: 'pricing', component: PricingComponent }
+      { path: 'pricing', component: PricingComponent },
+
     ],
   },
   { path: '404', component: NotFoundComponent },

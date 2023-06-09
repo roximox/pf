@@ -19,6 +19,11 @@ export class WebScraperService {
     return this.http.get<Array<Result>>(`${this.API}/id/${id}`);
   }
 
+  // Get scrapeLinksWebsite
+  public scrapeLinksWebsite(id: number): Observable<Array<string>> {
+    return this.http.get<Array<string>>(`${this.API}/scrapeLinksWebsite/${id}`);
+  }
+
   // Getters && Setters
   get results(): Array<Result> {
     if (this._results == null) {

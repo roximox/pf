@@ -6,9 +6,9 @@ export class Website {
   public statutWebSite: any;
   public clients: any;
   public scrappingLinks: any;
-  public available: number ;
-  public unavailable: number ;
+  public avaibale: number ;
+  public unvaibale: number ;
   public linkChecked: number ;
-  public linkProccessed: number ;
+  public linkProcessed: number ;
   public duree: number ;
 }

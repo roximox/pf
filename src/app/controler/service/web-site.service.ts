@@ -34,7 +34,7 @@ export class WebSiteService {
 
   // Get All Website
   public getAll(): Observable<Array<Website>> {
-    return this.http.get<Array<Website>>(`${this.API}/getAll`);
+    return this.http.get<Array<Website>>(`${this.API}/get-all`);
   }
 
   // Getters && Setters

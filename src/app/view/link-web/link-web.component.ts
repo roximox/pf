@@ -27,7 +27,7 @@ export class LinkWebComponent implements OnInit {
     protocol: string
   ): Promise<Website> {
     const website = await lastValueFrom(
-      this.webSiteService.fetchWebSiteByUrl('www.thisoldhouse.com', 'https')
+      this.webSiteService.fetchWebSiteByUrl(url, protocol)
     );
     return website;
   }
@@ -39,24 +39,27 @@ export class LinkWebComponent implements OnInit {
 
     // Fetch WebSite By Url
     this.loadedWebsite = await this.fetchWebSiteByUrl(
-      url.href.slice(0, -1),
+      url.hostname,
       url.protocol
     );
 
-    console.log('Website loaded success');
-    console.log('Heloooo');
-    this.route.navigate(['load']);
+    if (this.loadedWebsite.id !== undefined) {
+      this.route.navigate(['load']);
+      return;
+    }
+
+    this.route.navigate(['/404']);
   }
 
   // Logout user
   public logout() {
     this.loginService.logout();
-    this.route.navigate(["/login"])
+    this.route.navigate(['/login']);
   }
 
   // Getters && Setters
   // WebSiteServiceng serve
-  
+
   public get loadedWebsite(): Website {
     return this.webSiteService.loadedWebsite;
   }

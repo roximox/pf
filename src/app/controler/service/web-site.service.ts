@@ -29,7 +29,7 @@ export class WebSiteService {
 
   // Save Website
   public save(website: Website): Observable<number> {
-    return this.http.post<number>(`${this.API}/`, null);
+    return this.http.post<number>(`${this.API}/`, website);
   }
 
   // Get All Website

@@ -1,1 +1,73 @@
-<router-outlet></router-outlet>
+<div class="back">
+<div id="pdfTable" #pdfTable >
+  <header>
+      <div class="row d-flex justify-content-center">
+        <img class="col-lg-2 col-sm-4" src="../../../assets/loadPage/Group_1.svg" alt="" />
+      </div>
+  </header>
+  <section class="flex">
+    <dl>
+      <dt >Facture n:</dt>
+      <dd>29</dd>
+      <dt>Date de facturation:</dt>
+      <dd>10/06/2023 </dd>
+    </dl>
+  </section>
+  <section class="flex">
+    <dl class="bloc">
+      <dt class="sous-back">Nom et prénom:</dt>
+      <dt>hiba allah essarghi</dt>
+      <dt class="sous-back">Email: <br>
+      <dt>hibaallah703@gmail.com<br>
+      <dt class="sous-back">Web site:</dt>
+      <dt>https://thisoldhouse.com</dt>
+      <br/><dt class="sous-back">Statut:</dt>
+      <br/><dt >payed</dt>
+
+    </dl>
+
+    <dl class="bloc">
+      <dt class="sous-back">Description de service:</dt>
+      <dt >Scraping sur le site données </dt>
+      <dt class="sous-back">Période totale:</dt>
+      <dt>18 min</dt>
+      <dt class="sous-back">Affiliate id:</dt>
+      <dt>86</dt>
+      <dt class="sous-back">Link checked:</dt>
+      <dt>16678</dt>
+
+    </dl>
+  </section>
+  <table>
+    <thead>
+    <tr>
+      <th>Désignation</th>
+      <th>nombre de page</th>
+      <th>Montant</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Scraping </td>
+      <td>27690</td>
+      <td>7990&#8202;DH</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="3"> </td>
+      <td>Total:</td>
+      <td>7990&#8202;DH</td>
+    </tr>
+    </tfoot>
+  </table>
+  <footer>
+    <p>Elhassan Mendil
+    </p>
+    <p>Eysi Marrakech
+    </p>
+  </footer>
+</div>
+<!--<button class="btn dwn-btn"  (click)="downloadAsPDF()">Export To PDF</button>-->
+  <button class="btn dwn-btn" (click)="telechargerCSV()">Télécharger en CSV</button>
+</div>

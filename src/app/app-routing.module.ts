@@ -38,7 +38,7 @@ const routes: Routes = [
       { path: 'load', component: LoadPageComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'facture', component: HomeClientComponent },
-
+      { path: 'add-site', component: AddSiteComponent },
     ],
   },
   {
@@ -54,7 +54,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'custom-checker', component: CustumLinkCheckComponent },
       { path: 'pricing', component: PricingComponent },
-      { path: 'add-site', component: AddSiteComponent },
+
 
     ],
   },

@@ -23,14 +23,14 @@
 
 .right_header .icon {
   position: relative;
+  cursor: pointer;
 }
 
-.right_header .icon:hover ul {
+/* .right_header .icon:hover ul {
   display: flex;
-}
+} */
 
 .right_header .icon ul {
-  display: none;
   flex-direction: column;
   gap: 8px;
   position: absolute;
@@ -39,7 +39,7 @@
   background-color: white;
   color: black;
   margin-top: 8px;
-  padding: 0;
+  padding: 10px;
   transition: all 0.5s;
 }
 

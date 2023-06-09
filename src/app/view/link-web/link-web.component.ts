@@ -13,6 +13,7 @@ import { WebSiteService } from 'src/app/controler/service/web-site.service';
   styleUrls: ['./link-web.component.css'],
 })
 export class LinkWebComponent implements OnInit {
+  show = false;
   constructor(
     private webSiteService: WebSiteService,
     private webScraperService: WebScraperService,
@@ -20,6 +21,10 @@ export class LinkWebComponent implements OnInit {
     private route: Router
   ) {}
   ngOnInit(): void {}
+
+  showToggle() {
+    this.show = !this.show;
+  }
 
   // Get Website by url
   public async fetchWebSiteByUrl(

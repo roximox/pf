@@ -6,11 +6,10 @@
 
     <div class="right_header">
       <div class="icon">
-        <img class="vector" src="../../../assets/link-web/Vector.svg" alt="" />
-        <ul >
+        <img class="vector" src="../../../assets/link-web/Vector.svg" alt="" (click)="showToggle()" />
+        <ul *ngIf="show === true">
           <li (click)="logout()">Logout</li>
           <li>Settings</li>
-          <li>Logout</li>
         </ul>
       </div>
       <div class="num">3</div>

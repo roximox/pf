@@ -1,10 +1,10 @@
 <h1>Dashboard</h1>
 <div class="div-conteneur row">
-  <div class="col-md-3" *ngFor="let url of allWebsiteUrl">
+  <div class="col-md-4" *ngFor="let url of allWebsiteUrl">
     <div class="stati turquoise">
       <img class="icon-exclamation icons" src="assets/eysi-chart.png" />
       <div>
-        <h3>{{ url }}</h3>
+        <h3>{{ url.length > 25 ? url.slice(0, 25) : url }}..</h3>
         <span>Site Health Score</span>
       </div>
     </div>

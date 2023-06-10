@@ -201,117 +201,13 @@
 
     <h2 class="summuray-titre">Page List</h2>
     <div class="links-table-container">
-      <table class="links">
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
-          <td><i class="fa fa-circle"></i> ready</td>
-        </tr>
-        <tr>
-          <td>https://eysi.net</td>
+      <div class="" *ngIf="allWebsiteUrl === undefined">
+        <h1>Loading...</h1>
+      </div>
+
+      <table class="links" *ngIf="allWebsiteUrl !== undefined">
+        <tr *ngFor="let url of allWebsiteUrl">
+          <td>{{ url }}</td>
           <td><i class="fa fa-circle"></i> ready</td>
         </tr>
       </table>

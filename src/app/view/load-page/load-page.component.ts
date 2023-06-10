@@ -26,9 +26,14 @@ export class LoadPageComponent implements OnInit {
     this.results = await this.fetchAmazonProducts(
       this.webSiteService.loadedWebsite.id
     );
-    localStorage.setItem('products', JSON.stringify(this.results));
-    console.log('Results is loaded success');
-    this.route.navigate(['/dashboard/summary']);
+    if (this.results !== undefined || this.results !== null) {
+      localStorage.setItem('products', JSON.stringify(this.results));
+      console.log('Results is loaded success');
+      this.route.navigate(['/dashboard/summary']);
+      return;
+    }
+
+    this.route.navigate(['404']);
   }
 
   // Get Amazon Products

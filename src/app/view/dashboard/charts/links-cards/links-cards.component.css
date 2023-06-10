@@ -1,7 +1,7 @@
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BlackItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-MediumItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-MediumItalic.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-MediumItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BoldItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BoldItalic.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-BoldItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-BookItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Medium.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-BookItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Book.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Book.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-Book.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Book.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -45,39 +45,39 @@
 
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Black.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Black.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-Black.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family:Circular Std ;
-  src: url('src/app/css/fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-BlackItalic.woff') format('woff');
+  font-family: Circular Std;
+  src: url("src/app/css/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Circular Std;
-  src: url('src/app/css/fonts/CircularStd-Bold.woff2') format('woff2'),
-  url('src/app/css/fonts/CircularStd-Bold.woff') format('woff');
+  src: url("src/app/css/fonts/CircularStd-Bold.woff2") format("woff2"),
+    url("src/app/css/fonts/CircularStd-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-body{
+body {
   background: url("http://rybd.com/wp-content/uploads/2014/12/blue-polygon.png");
 }
-h1{
-  color:black;
+h1 {
+  color: black;
   font-family: Circular Std;
 }
-p{
-  color:white;
+p {
+  color: white;
 }
 
 /******************************
@@ -85,33 +85,33 @@ p{
 Stati - minimal statistical cards
 
 *******************************/
-.stati{
+.stati {
   background: #fff;
   height: 6em;
-  padding:1em;
-  margin:1em 0;
-  -webkit-transition: margin 0.5s ease,box-shadow 0.5s ease; /* Safari */
-  transition: margin 0.5s ease,box-shadow 0.5s ease;
-  -moz-box-shadow:0px 0.2em 0.4em rgb(0, 0, 0,0.8);
-  -webkit-box-shadow:0px 0.2em 0.4em rgb(0, 0, 0,0.8);
-  box-shadow:0px 0.2em 0.4em rgb(0, 0, 0,0.8);
+  padding: 1em;
+  margin: 1em 0;
+  -webkit-transition: margin 0.5s ease, box-shadow 0.5s ease; /* Safari */
+  transition: margin 0.5s ease, box-shadow 0.5s ease;
+  -moz-box-shadow: 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
+  box-shadow: 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
   border-radius: 20px;
 }
-.stati:hover{
-  margin-top:0.5em;
-  -moz-box-shadow:0px 0.4em 0.5em rgb(0, 0, 0,0.8);
-  -webkit-box-shadow:0px 0.4em 0.5em rgb(0, 0, 0,0.8);
-  box-shadow:0px 0.4em 0.5em rgb(0, 0, 0,0.8);
-  background-color: #5769B1;
+.stati:hover {
+  margin-top: 0.5em;
+  -moz-box-shadow: 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+  box-shadow: 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+  background-color: #5769b1;
   color: white;
 }
-.stati img{
-  font-size:3.5em;
+.stati img {
+  font-size: 3.5em;
 }
-.stati div{
+.stati div {
   display: block;
-  float:right;
-  text-align:right;
+  float: right;
+  text-align: right;
 }
 .stati div h4 {
   font-family: Circular Std;
@@ -120,7 +120,7 @@ Stati - minimal statistical cards
   font-size: 18.5813px;
   line-height: 24px;
   width: 100%;
-  padding-top:0px;
+  padding-top: 0px;
   display: block;
 }
 .stati div span {
@@ -131,39 +131,40 @@ Stati - minimal statistical cards
   line-height: 16px;
   /* identical to box height */
 
-
-  color: #C0C3DC;
+  color: #c0c3dc;
 
   width: 100%;
   display: block;
 }
 
-.stati.left div{
-  float:left;
-  text-align:left;
+.stati.left div {
+  float: left;
+  text-align: left;
 }
+
 .div-conteneur {
   display: flex;
-  overflow-x: auto;
+  flex-direction: column;
+  overflow-x: scroll;
   white-space: nowrap;
   max-width: 100%;
+  max-height: 150px;
 }
 
+.div-conteneur::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
 
+.div-conteneur::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
 
+.div-conteneur::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.div-conteneur::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { lastValueFrom } from 'rxjs';
 import { Result } from 'src/app/controler/model/result.model';
 import { WebScraperService } from 'src/app/controler/service/web-scraper.service';
 import { WebSiteService } from 'src/app/controler/service/web-site.service';
@@ -12,6 +13,8 @@ import { WebSiteService } from 'src/app/controler/service/web-site.service';
 export class CustomLinkChekerComponent {
   results_view = new Array<Result>();
   p = JSON.parse(localStorage.getItem('products'));
+  allWebsiteUrl: Array<string>;
+  storageWebsite = JSON.parse(localStorage.getItem('loadedWebsite'));
 
   constructor(
     private webSiteService: WebSiteService,
@@ -28,6 +31,16 @@ export class CustomLinkChekerComponent {
     console.log(this.results);
 
     console.log(this.p);
+    this.allWebsiteUrl = await this.getAllUrl();
+    console.log("first")
+    console.log(this.allWebsiteUrl)
+  }
+
+  async getAllUrl(): Promise<Array<string>> {
+    const urls: Array<string> = await lastValueFrom(
+      this.webScraperService.scrapeLinksWebsite(this.storageWebsite.id)
+    );
+    return urls;
   }
 
   // Getters & Setters

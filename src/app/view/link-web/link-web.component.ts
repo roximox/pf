@@ -48,12 +48,9 @@ export class LinkWebComponent implements OnInit {
       url.protocol
     );
 
-    if (this.loadedWebsite.id !== undefined) {
-      this.route.navigate(['load']);
-      return;
-    }
-
-    this.route.navigate(['/404']);
+    localStorage.setItem('loadedWebsite', JSON.stringify(this.loadedWebsite));
+    this.route.navigate(['load']);
+    return;
   }
 
   // Logout user

@@ -21,6 +21,7 @@ import { AuthGuard } from './controler/auth/auth.guard';
 import {NotFoundComponent} from "./view/not-found/not-found.component";
 import {CustumLinkCheckComponent} from "./view/custum-link-check/custum-link-check.component";
 import {AddSiteComponent} from "./view/add-site/add-site.component";
+import {HelpComponent} from "./view/help/help.component";
 const routes: Routes = [
   {
     path: '',
@@ -36,7 +37,8 @@ const routes: Routes = [
       { path: 'link-web', component: LinkWebComponent },
       { path: 'load', component: LoadPageComponent },
       { path: 'contact-us', component: ContactUsComponent },
-      { path: 'facture', component: HomeClientComponent }
+      { path: 'facture', component: HomeClientComponent },
+      { path: 'help', component: HelpComponent }
     ],
   },
   {

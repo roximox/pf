@@ -29,7 +29,7 @@
 .error-page .search-form input {
   width: 400px;
   height: 50px;
-  padding: 0px 78px 0 30px;
+  /* padding: 0px 78px 0 30px; */
   border: none;
   background: #f6f6f6;
   border-radius: 5px;
@@ -57,11 +57,7 @@
 .error-page .search-form .btn:hover{
   background:#333;
 }
-@media screen {
-  .contenu{
-    margin-left:60px;
-  }
-}
+
 
 @font-face {
   font-family: Circular Std;

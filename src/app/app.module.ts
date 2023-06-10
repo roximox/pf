@@ -41,6 +41,7 @@ import {ChartModule} from "primeng/chart";
 import { LineChartComponent } from './view/dashboard/charts/line-chart/line-chart.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { AddSiteComponent } from './view/add-site/add-site.component';
+import { HelpComponent } from './view/help/help.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { AddSiteComponent } from './view/add-site/add-site.component';
     ButtonsComponent,
     LineChartComponent,
     AddSiteComponent,
+    HelpComponent,
   ],
   imports: [
     BrowserModule,

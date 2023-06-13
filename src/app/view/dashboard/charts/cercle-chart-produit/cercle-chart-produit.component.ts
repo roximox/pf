@@ -18,7 +18,7 @@ export class CercleChartProduitComponent  implements OnInit{
       labels: ['avaibale', 'unavaibale', 'error 404'],
       datasets: [
         {
-          data: [300, 100, 200],
+          data: ['400', 60, 20],
           backgroundColor: [documentStyle.getPropertyValue('--purple-700'), documentStyle.getPropertyValue('--purple-300'), documentStyle.getPropertyValue('--purple-100')],
           hoverBackgroundColor: [documentStyle.getPropertyValue('--purple-800'), documentStyle.getPropertyValue('--purple-400'), documentStyle.getPropertyValue('--purple-200')]
         }

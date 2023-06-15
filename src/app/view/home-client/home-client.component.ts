@@ -9,7 +9,7 @@ import * as Papa from 'papaparse';
   styleUrls: ['./home-client.component.scss']
 })
 export class HomeClientComponent {
-  /*title = 'htmltopdf';
+  title = 'htmltopdf';
   @ViewChild('pdfTable', {static: false})
   pdfTable!: ElementRef;
 
@@ -44,9 +44,9 @@ export class HomeClientComponent {
 
   // ...
 
-}*/
 
-  @ViewChild('pdfTable', { static: false }) pdfTable: ElementRef;
+
+  /*@ViewChild('pdfTable', { static: false }) pdfTable: ElementRef;
 
   constructor(private renderer: Renderer2) { }
 
@@ -78,5 +78,5 @@ export class HomeClientComponent {
     });
 
     return csvRows.join('\n');
-  }
+  }*/
 }
